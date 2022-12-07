@@ -5,9 +5,7 @@
  *      Author: Nathan
  */
 
-#include <iostream>
 #include <fstream>
-#include <cstdint>
 #include <cmath>
 
 #include "BMP.h"
