@@ -28,7 +28,7 @@ void writeBITMAPCOREHEADER(ofstream &file, uint16_t width, uint16_t height){
 }
 
 void write24BitArray(ofstream &file, uint32_t* pixels, uint16_t width, uint16_t height){
-	int pad = (width*3)%4;
+	int pad = 4%(4-(width*3)%4);
 	uint32_t buffer = 0;
 	for(int i = height-1; i >= 0; i--){
 		for(int j = 0; j < width; j++){
