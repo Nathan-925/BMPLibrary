@@ -13,7 +13,7 @@
 using namespace std;
 
 uint16_t bitsPerPixel = 24;
-//test
+
 void writeBITMAPCOREHEADER(ofstream &file, int16_t width, int16_t height){
 	uint32_t headerSize = 12;
 	uint16_t colorPlanes = 1;
