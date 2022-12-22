@@ -11,6 +11,6 @@
 using namespace std;
 
 int main(){
-	Image img = bmp::readFile("tests/TestIn.bmp");
-	bmp::writeFile("tests/TestOut.bmp", img);
+	Image img = bmp::readFile("priori/BMPLibrary/tests/TestIn.bmp");
+	bmp::writeFile("priori/BMPLibrary/tests/TestOut.bmp", img);
 }

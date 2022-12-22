@@ -6,7 +6,7 @@
  */
 #include <string>
 
-#include "Image.h"
+#include "priori/Graphical/Image.h"
 
 #ifndef BMP_H_
 #define BMP_H_
