@@ -11,6 +11,7 @@
 #include "BMP.h"
 
 using namespace std;
+using namespace priori;
 
 uint16_t bitsPerPixel = 24;
 
@@ -39,8 +40,8 @@ void write24BitArray(ofstream &file, Image &image){
 	}
 }
 
-namespace bmp{
-	void writeFile(string fileName, Image &image){
+namespace priori{
+	void writebmp(string fileName, Image &image){
 		uint32_t offset = 26;
 		uint32_t size = offset + image.width*image.height*3 + image.height*((4-(image.width*3)%4)%4);
 
@@ -54,7 +55,7 @@ namespace bmp{
 		file.close();
 	}
 
-	Image readFile(string fileName){
+	Image readbmp(string fileName){
 		ifstream file(fileName, ios::binary);
 
 		file.seekg(10);

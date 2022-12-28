@@ -8,9 +8,9 @@
 
 #include "../BMPIO.h"
 
-using namespace std;
+using namespace priori;
 
 int main(){
-	Image img = bmp::readFile("priori/BMPLibrary/tests/TestIn.bmp");
-	bmp::writeFile("priori/BMPLibrary/tests/TestOut.bmp", img);
+	Image img = readbmp("priori/BMPLibrary/tests/TestIn.bmp");
+	writebmp("priori/BMPLibrary/tests/TestOut.bmp", img);
 }

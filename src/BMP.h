@@ -11,9 +11,9 @@
 #ifndef BMP_H_
 #define BMP_H_
 
-namespace bmp{
-	void writeFile(std::string fileName, Image &image);
-	Image readFile(std::string fileName);
+namespace priori{
+	void writebmp(std::string fileName, Image &image);
+	Image readbmp(std::string fileName);
 }
 
 #endif /* BMP_H_ */
