@@ -5,10 +5,10 @@
  *      Author: Nathan
  */
 
+#include <priori/bmp/bmpio.h>
 #include <fstream>
 #include <cmath>
 
-#include "BMP.h"
 
 using namespace std;
 using namespace priori;
