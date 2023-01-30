@@ -4,11 +4,10 @@
  *  Created on: Dec 6, 2022
  *      Author: Nathan
  */
-
-#include <priori/bmp/bmpio.h>
 #include <fstream>
 #include <cmath>
 
+#include "bmpio.h"
 
 using namespace std;
 using namespace priori;
@@ -31,9 +30,8 @@ void write24BitArray(ofstream &file, Image &image){
 	uint32_t buffer = 0;
 	for(int i = image.height-1; i >= 0; i--){
 		for(int j = 0; j < image.width; j++){
-			file.write(((char*)&image[j][i].r), 1);
-			file.write(((char*)&image[j][i].g), 1);
-			file.write(((char*)&image[j][i].b), 1);
+			uint32_t writeVal = image[j][i];
+			file.write((char*)&writeVal, 3);
 		}
 		if(pad > 0)
 			file.write((char*)&buffer, pad);
