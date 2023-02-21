@@ -30,7 +30,7 @@ void write24BitArray(ofstream &file, Image &image){
 	uint32_t buffer = 0;
 	for(int i = image.height-1; i >= 0; i--){
 		for(int j = 0; j < image.width; j++){
-			uint32_t writeVal = image[j][i];
+			uint32_t writeVal = (uint32_t)image[j][i];
 			file.write((char*)&writeVal, 3);
 		}
 		if(pad > 0)
